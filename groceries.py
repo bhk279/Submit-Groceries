@@ -32,7 +32,6 @@ print("THERE ARE",pcount,"PRODUCTS:")
 
 products=sorted(products,key=products_name)
 
-
 for product in products:
     print(" + "+product["name"]+" ($"+"{0:.2f}".format((product["price"]))+")")
 
