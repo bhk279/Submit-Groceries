@@ -36,3 +36,23 @@ for product in products:
     print(" + "+product["name"]+" ($"+"{0:.2f}".format((product["price"]))+")")
 
 print("--------------")
+
+#Departments
+#
+departments = []
+
+for product in products:
+  departments.append(product["department"])
+
+department_set = set() # removing duplicate values
+department_list = list()# converts back to a list to enabling sorting
+for item in products:
+    department_set.add(item["department"])
+    department_list.append(item["department"])
+
+print("THERE ARE " + str(len(department_set)) + " DEPARTMENTS:")
+
+departments_alpha_order = sorted(department_set)
+
+for department_name in departments_alpha_order:
+    print(" + " + department_name.title() + " (" + str(department_list.count(department_name)) + " products)")
